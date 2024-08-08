@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Jenthill';
+  src: local("Jenthill"),
+  url("./fonts/Jenthill.ttf") format("truetype");
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: local("Cormorant Garamond"),
+  url("./fonts/CormorantGaramond-Regular.ttf") format("truetype");
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Cormorant Garamond"
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.poetry-editor-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.editor {
+  width: 80%;
+  min-height: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rhymes {
+  width: 80%;
+}
+
+.rhymes ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rhymes li {
+  padding: 5px;
+}
+
+h3 {
+  font-family: 'Jenthill';
+  font-weight: normal;
+  letter-spacing: 0.75px;
+}
+
+[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  pointer-events: none;
+  letter-spacing: 0.75px;
+  color: grey;
+  font-family: 'Jenthill';
+  display: block; /* For Firefox */
 }
