@@ -18,7 +18,7 @@ body {
   padding: 20px;
 }
 
-.editor {
+#editable {
   width: 80%;
   min-height: 200px;
   border: 1px solid #ccc;
@@ -26,6 +26,7 @@ body {
   margin-bottom: 20px;
   font-size: 18px;
   line-height: 1.5;
+  overflow-y: auto;
 }
 
 .rhymes {
