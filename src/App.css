@@ -48,6 +48,7 @@ h3 {
   font-family: 'Jenthill';
   font-weight: normal;
   letter-spacing: 0.75px;
+  text-transform: lowercase;
 }
 
 [contenteditable=true]:empty:before{
