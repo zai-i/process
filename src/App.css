@@ -57,3 +57,15 @@ h3 {
   font-family: 'Jenthill';
   display: block; /* For Firefox */
 }
+
+* {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+input,
+textarea,
+[contenteditable] {
+  -webkit-user-select: text;
+  user-select: text;
+}
