@@ -34,7 +34,7 @@ const PoetryEditor = () => {
           const wordStart = text.lastIndexOf(' ', offset) + 1;
           let wordEnd = text.indexOf(' ', offset);
           if (wordEnd === -1) wordEnd = text.length;
-          const word = text.substring(wordStart, wordEnd).replace(/[^\w\s\']|_/g, "").replace(/\s+/g, " ");
+          const word = text.substring(wordStart, wordEnd).match(/[^_\W]+/g).join(' ');
 
           setSelectedWord(word);
           const response = await axios.get(`https://api.datamuse.com/words?rel_rhy=${word}`);
